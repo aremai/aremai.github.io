@@ -12,3 +12,5 @@ github_username:  aremai
 
 # Build settings
 markdown: kramdown
+pygments: true
+permalink: /:title
