@@ -1,0 +1,53 @@
+# Site wide configuration
+
+title: aremai.net
+locale: en_US
+description: sysadmin stuff and misc stuff that i found on the internet...
+logo: site-logo.png
+search: false
+url: http://www.aremai.net
+
+
+# Jekyll configuration
+
+permalink:   /:categories/:title/
+markdown:    kramdown
+highlighter: pygments
+sass:
+  sass_dir: _sass
+  style: compressed
+gems:
+  - jekyll-sitemap
+
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  use_coderay: false
+
+include: [".htaccess"]
+exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md", "vendor"]
+
+
+# Site owner
+owner:
+  name: aremai
+  avatar: bio-photo.jpg
+  email: tm_nospam@aremai.net
+  disqus-shortname:
+  #twitter: #username
+  #facebook: #username
+  github: aremai
+  #stackexchange: #http://stackoverflow.com/users/123456/username
+  #linkedin: #username
+  #instagram: #username
+  #flickr: #username
+  #tumblr: #username
+  google:
+    #plus: #username
+    #analytics:
+    #verify:
+    #ad-client:
+    #ad-slot: 
+  #bing-verify:
