@@ -3,16 +3,51 @@
 permalink: /:categories/:year/:month/:day/:title 
 
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
-highlighter: pygments
+pygments: true
 
-# Themes are encouraged to use these universal variables 
-# so be sure to set them if your theme uses them.
+markdown: kramdown
+
+# The title and tagline is showed on homepage
 #
-title : aremai blog
+title :  aremai
+tagline: aremai::blog
+
+# Information about author
+#
 author :
-  name : theresa
-  email : tm@_nospam.aremai.net
-  github : aremai
+  name : aremai
+  
+# Information for contacts showed at on the footer
+#
+contact :
+  e-mail : mailto:meh@gmail.com
+  Github : https://github.com/aremai
+  Google+ : 
+  
+# Links showed on the footer
+#
+links :
+  My Blog : http://aremai.github.io/
+  
+# The way of excerpt. There are two options: "teaser" and "truncate_words".
+# "teaser" option: look for the More tag (<!--more-->) and create a teaser from the content that precedes the More tag.
+#                  You must place "<!--more-->" at paragraph in post. The whole content will be displayed in homepage if no More tag found in post.
+# "truncate_words" option: generate an excerpt automatically by selecting the first 20 words of the post. It doesn't work well in some of no-English post.
+#
+excerpt : teaser
+
+# The number of items displayed per page.
+#
+paginate : 5
+
+# The destination of the pagination pages
+#
+paginate_path : ":num"
+
+# Whether to enable load more post automatically in homepage. Set 'true' to enable. Set 'false' to disable.
+# You must click the 'load more' button to load more posts when it is set to 'false'.
+#
+auto_loadmore : true
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 
@@ -71,6 +106,8 @@ JB :
   tags_path : /tags.html
   atom_path : /atom.xml
   rss_path : /rss.xml
+  about_path : /about.html
+  search_path : /search.html
 
   # Settings for comments helper
   # Set 'provider' to the comment provider you want to use.
@@ -78,8 +115,10 @@ JB :
   #
   comments :
     provider : false
+    duoshuo :
+      short_name : simpleyyt
     disqus :
-      short_name : jekyllbootstrap
+      short_name : simpleyyt
     livefyre :
       site_id : 123
     intensedebate :
@@ -124,4 +163,3 @@ JB :
   # and include your custom code. Your custom file must be defined at:
   #   ./_includes/custom/[HELPER]
   # where [HELPER] is the name of the helper you are overriding.
-  
