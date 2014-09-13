@@ -8,4 +8,4 @@ group: navigation
  * **Email:** [shoot me an email](mailto:tm_nospam@aremai.net)
  * **Github:** [aremai](https://github.com/aremai)
 
-![Alt text](assets/themes/Snail/img/avatar.jpg 150x150) 
+![Alt text](assets/themes/Snail/img/avatar.jpg) 
