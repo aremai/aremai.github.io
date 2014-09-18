@@ -18,7 +18,7 @@ group: navigation
 
 ### **long version**
 
-my name is theresa. during the day i'm a (unix) sysadmin located in a large-sized data center. during the night i work on various projects for my bachelor degree in computer science. \>>> hence always sleep deprived, but mostly in good spirit ;)
+my name is theresa. during the day i'm a (unix) sysadmin located in a large-sized data center. during the night i work on various projects for my bachelor degree in computer science. >> hence always sleep deprived, but mostly in good spirit ;)
 
 within the next weeks, i'll blog about my recent projects that i have been working on. if you do like them or have an idea, then don't hesitate to drop me a line through email or jabber (my jabber id: hellslide@jabber.ccc.de)
 
@@ -28,4 +28,4 @@ so watch this space and check back for more updates soon!
 
 thanks for stopping by and have a nice day! ;)
 
-PS: If you want to use encryption, you can use my public key to send me encrypted mails ;-) 
+PS: If you want to use encryption, you can use my public key to send me [encrypted mails](/security/2014/09/18/gpg/) ;-) 
