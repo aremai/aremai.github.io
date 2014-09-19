@@ -9,8 +9,8 @@ markdown: kramdown
 
 # The title and tagline is showed on homepage
 #
-title :  aremai
-tagline: aremai::blog
+title :  aremai::blog
+tagline: _serious_ thoughts on security matters
 
 # Information about author
 #
@@ -20,7 +20,7 @@ author :
 # Information for contacts showed at on the footer
 #
 contact :
-  e-mail : mailto:meh@gmail.com
+  e-mail : mailto:tm_nospam@aremai_nospam.net
   Github : https://github.com/aremai
   Google+ : 
   
