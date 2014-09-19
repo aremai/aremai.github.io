@@ -5,11 +5,11 @@ group: home
 {% include JB/setup %}
 <div class="page-title-inline">
 	{% if page.group == 'home' %}
-	<h1>{{ site.title }} </h1>
-	{% if site.tagline %}<h2>{{ site.tagline }}</h2>{% endif %}
+	<h1>{{ site.title }} </h1><br />
+	{% if site.tagline %}<h3>{{ site.tagline }}</h3>{% endif %}
 	{% else %}
-	<h1>{{ page.title }} </h1>
-	{% if page.tagline %}<h2>{{ page.tagline }}</h2>{% endif %}
+	<h1>{{ page.title }} </h1><br />
+	{% if page.tagline %}<h3>{{ page.tagline }}</h3>{% endif %}
 	{% endif %}
 </div>
 <div class="cont932">
