@@ -10,7 +10,7 @@ markdown: kramdown
 # The title and tagline is showed on homepage
 #
 title :  aremai::blog
-tagline: serious thoughts on security matters
+tagline: some thoughts on security matters
 
 # Information about author
 #
