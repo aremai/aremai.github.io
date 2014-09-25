@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "bashbleed"
+title: "shellshock"
 category: security
-tags: [security, bashbleed, shellshock, exploit]
+tags: [security, shellshock, bashbug, bashbleed exploit]
 ---
 {% include JB/setup %}
 
 As many of you probably heard today, a new severe bug has surfaced and effects numerous UNIX machines, be it either servers or desktops. Any UNIX machine that uses a bash shell. Experts claim it's actually worse than the heartbleed bug, as it affects much more machines.
-The bug goes by the name bashbleed or shellshock.
+The bug goes by the name shellshock, bashbug or bashbleed.
 
 <!--more-->
 
