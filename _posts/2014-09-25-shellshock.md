@@ -2,7 +2,7 @@
 layout: post
 title: "shellshock"
 category: security
-tags: [security, shellshock, bashbug, bashbleed exploit]
+tags: [security, shellshock, bashbug, bashbleed, exploit]
 ---
 {% include JB/setup %}
 
