@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "bashbleed"
-date: "Don Sep 25 20:19:31 +0200 2014"
 category: security
 tags: [security, bashbleed, shellshock, exploit]
 ---
