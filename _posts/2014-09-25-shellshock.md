@@ -22,6 +22,7 @@ To find out if you're still affected from this bug, best run this in your bash.
 
     env HOSTNAME='() { :;}; echo vulnerable' bash -c "env | grep HOSTNAME"
 
+<br>
 If your shell returns the following, you're still affected and should immediately run an update on your machine.
 
     vulnerable 
