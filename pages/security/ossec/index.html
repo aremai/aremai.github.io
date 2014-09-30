@@ -1,8 +1,13 @@
 ---
 layout: page
 title: "OSSEC"
+header: Posts by Category
 description: "here you will find all kinds of stuff that i recently found out about the open-source security tool ossec....also you can track the current status of my thesis. ;) "
 group: navigation
 ---
 {% include JB/setup %}
 here you will find all kinds of stuff that i recently found out about the open-source security tool ossec....also you can track the current status of my thesis. ;) 
+
+{% for post in site.categories[category_name] %}
+    <li>{{ post.title }}</li>
+    {% endfor %}
