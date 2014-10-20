@@ -6,8 +6,8 @@ description: "here you will find all kinds of stuff that i recently found out ab
 group: navigation
 ---
 {% include JB/setup %}
-here you will find all kinds of stuff that i recently found out about the open-source security tool ossec....also you can track the current status of my thesis. ;) 
+{% if post.category == "security%}
+    {% comment %} List posts... {% endcomment %}
+    {% endif %}
 
-{% for post in site.categories[category_name] %}
-    <li>{{ post.title }}</li>
-    {% endfor %}
+here you will find all kinds of stuff that i recently found out about the open-source security tool ossec....also you can track the current status of my thesis. ;) 
