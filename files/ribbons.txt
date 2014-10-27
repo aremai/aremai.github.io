@@ -1,0 +1,74 @@
+
+{{ Bambi achievement
+
+    | latitude = 47 
+    | longitude = 14 
+    | date = 2014-10-26 
+    | name = [[User:B2C|B2C]] and [[User:Micsnare|Micsnare]]
+    |
+
+}} 
+
+{{gratuitous ribbon
+
+    | color = blue
+    | icon = Austria_icon.svg
+    | latitude = 47
+    | longitude = 14
+    | date = 2014-10-26
+    | achievement = Neutrality achievement
+    | description = geohashing on the [[wikipedia:Declaration of Neutrality|Austrian national holiday]] at the
+    | name = [[User:B2C|B2C]] and [[User:Micsnare|Micsnare]]
+}} 
+
+{{gratuitous ribbon
+| color = grey
+| icon = Thumbsup.png
+| latitude = 47 | longitude = 14 | date = 2014-10-26
+| achievement = [[Gratuitous ribbon achievement|Foggy Geohash Gratuitous Retro Achievement]] 
+| description = traveling through fog to reach the hashpoint
+| name = [[User:B2C|B2C]] and [[User:Micsnare|Micsnare]] 
+| image = 2010-01-22_foggydriving.jpg
+}}
+
+{{Multihash2 
+| name = [[User:B2C|B2C]] and [[User:Micsnare|Micsnare]] 
+| count = 2 
+| date = 2013-10-26
+}}
+
+{{Earliest geohasher
+| latitude = 47
+| longitude = 14
+| date = 2013-10-26
+| name = B2c
+}}
+{{Ribbon
+| color    = silver
+| icon     = TimeTravel.PNG
+| user     = {{{name| Micsnare}}}
+| achievement = [[Time-Traveller Geohash]] Achievement
+| action   = reaching both the [http://irc.peeron.com/xkcd/map/map.html?lat=47&long=14&date=2014-10-26 (47, 14)] and [http://irc.peeron.com/xkcd/map/map.html?lat=47&long=13&date=2014-10-26 (47, 13) geohashes] exactly on 2013-10-26, at 02:01 AM
+| category = Time-traveller achievement
+}}
+{{xkcd-100-Honorable-Mention
+| latitude = 47
+| longitude = 14
+| date = 2014-10-26
+| distance = 116km
+| name = [[User:B2C|B2C]] and [[User:Micsnare|Micsnare]]
+}}
+
+{{Drowned rat geohash|name=B2c|latitude=47|longitude=14|date=2014-10-26|honourable=yes|reason=rain}}
+{{Drowned rat geohash|name=Micsnare|latitude=47|longitude=14|date=2014-10-26|honourable=yes|reason=rain}}
+
+
+{{Insomnia
+| latitude = 47
+| longitude = 14
+| date = 2014-10-26
+| achievement ) [[Insomnia]] Achievement
+| action = by not sleeping the entire day to go location scouting and hashing. (that's true dedication)
+| name = [[User:B2C|B2C]] and [[User:Micsnare|Micsnare]]
+| image = insomnia.png
+}}
