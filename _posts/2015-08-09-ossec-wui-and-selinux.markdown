@@ -36,28 +36,28 @@ however after the setup script has finished, you're pretty much good to go. you 
 at first i was quite confused, and would have never thought of selinux to be causing the problem.
 but a quick look into the apache error logs, i found a lot of "permission denieds" in this log....
 
-   # Warning: opendir(/var/ossec/etc/ossec.conf) [function.opendir]: failed to open dir: Permission denied in /var/www/ossec-wui/lib/os_lib_handle.php on line 94
+    # Warning: opendir(/var/ossec/etc/ossec.conf) [function.opendir]: failed to open dir: Permission denied in /var/www/ossec-wui/lib/os_lib_handle.php on line 94
 
 in order to fix this problem i did the following:
 
    this restores the security context of the ossec wui folder
 
-   # restorecon -R /var/www/html/ossec-wui/
+    # restorecon -R /var/www/html/ossec-wui/
 
    and this changes the security context for the OSSEC alerts.log file so it can be read by the apache server. 
 
-   # chcon -R -t httpd_sys_content_t '/var/www/html/ossec-wui/'
+    # chcon -R -t httpd_sys_content_t '/var/www/html/ossec-wui/'
 
-   # chcon -t httpd_sys_content_t '/var/ossec'
-   # chcon -R -t httpd_sys_content_t '/var/ossec/logs/'
-   # chcon -R -t httpd_sys_content_t '/var/ossec/queue/agent-info/'
-   # chcon -R -t httpd_sys_content_t '/var/ossec/queue/syscheck'
-   # chcon -R -t httpd_sys_content_t '/var/ossec/stats/'
+    # chcon -t httpd_sys_content_t '/var/ossec'
+    # chcon -R -t httpd_sys_content_t '/var/ossec/logs/'
+    # chcon -R -t httpd_sys_content_t '/var/ossec/queue/agent-info/'
+    # chcon -R -t httpd_sys_content_t '/var/ossec/queue/syscheck'
+    # chcon -R -t httpd_sys_content_t '/var/ossec/stats/'
 
    after that you only need to restart the apache daemon and ossec.
 
-   # service httpd restart
-   # /var/ossec/bin/ossec-control restart
+    # service httpd restart
+    # /var/ossec/bin/ossec-control restart
 
    now you should be able to see all your alerts and integrity checks in your ossec-wui instead of the permission denieds or the "unable to access ossec directory" messages.
 
