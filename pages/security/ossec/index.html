@@ -9,6 +9,17 @@ group: navigation
 
 here you will find all kinds of stuff that i recently found out about the open-source security tool ossec....also you can track the current status of my thesis. ;) 
 
-{% for post in site.categories[category_name] %}
-    <li>{{ post.title }}</li>
-    {% endfor %}
+{% for category in site.categories %}
+    {% if category[0] == page.rcategory %}
+        {% for catposts in category %}
+            {% if forloop.first %}
+                {% continue %}
+            {% endif %}
+            {% for catpost in catposts %}
+
+                <p>{{ catpost.title }}</p>
+
+            {% endfor %}
+        {% endfor %}
+    {% endif %}
+{% endfor %}
