@@ -2,12 +2,13 @@
 layout: default
 ---
 
-{{ content }}
+ {% include themes/Snail/page.html %}
+
 
 <ul class="post-list">
   {% assign cat_url = page.permalink | split: "/" %}
   {% assign cat = cat_url[1] %}
   {% for mypost in site.categories[cat] %}
-    <li>{{ mypost.title }}</li>
+<li> <a href="{{ mypost.url | prepend: site.baseurl }}">{{ mypost.title }}</a></li>
   {% endfor %}
 </ul>
