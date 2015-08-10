@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "OSSEC (WUI) and SELinux"
-tags: [ossec, security, ids, hids]
+tags: [ossec, security, ids, hids, centOS]
 category: ossec
 ---
 
@@ -15,17 +15,17 @@ however, i should stop rambling and get to it.
 
 today i want to share my experience regarding ossec and selinux, and how they work together (or in my case don't work together).
 
-my test environment is a centos (6.7) box, having installed the latest patches et al, and it comes with selinux enabled by default. now what most people do is to disable selinux right away. well, i can understand this to some extent, because selinux can be such a hassle if you just want a working environment and/or application. BUT for security sanity we would want selinux ENABLED for a very good reason. i know it can be a pain in the neck sometimes, but what OSSEC can also check is your system policies (OSSEC ships with a rootkit and audit check module for policy enforcement). one of those checks is the so-called CIS check (google CIS benchmark if you don't know what it does).
-now back to the topic, one of the CIS benchmark tests checks if you have selinux enabled and if you have it set to "targeted" mode. since i wanted my system to pass those two CIS benchmark checks i fiddled around with selinux a bit to get it working.
-hopefully i could now convince to enable selinux on your box again.
+my test environment is a standard **centos (6.7) box**, having installed the latest patches et al, and it comes with selinux enabled by default. now what most people do is to disable selinux right away. well, i can understand this to some extent, because selinux can be such a hassle if you just want a working environment and/or application. BUT for security sanity we would want selinux ENABLED for a very good reason. i know it can be a pain in the neck sometimes, but what OSSEC can also do is, check your system policies (OSSEC ships with a rootkit and audit check module for policy enforcement). one of those checks is the so-called CIS check (google CIS benchmark if you don't know what it does).
+one of the CIS benchmark tests checks if you have selinux enabled and if you have it set to "targeted" mode. since i wanted my system to pass those two CIS benchmark checks i fiddled around with selinux a bit to get it working.
+hopefully i could now convince you to enable selinux on your box again.
 
-here's what i did to get ossec and its deprecated web-ui (WUI) working with selinux.
+here's what i did to get ossec and its deprecated web-ui (WUI) working with selinux enabled.
 
 <!--more-->
 
-first of all i cloned the latest version of ossec-wui from the github repository.
-https://github.com/ossec/ossec-wui
-and followed its guidelines. i can't stress enough that you follow this guidelines (and adapt the apache groupname "www-data" with "apache") and ESPECIALLY use the setup script.
+first of all i cloned the latest version of ossec-wui from the [github repository]
+(https://github.com/ossec/ossec-wui).
+and followed its guidelines. i can't stress enough that you follow these guidelines (and adapt the apache groupname "www-data" with "apache" if you're runnig a centOS/RHEL based system) and **ESPECIALLY** use the setup script.
 
 
     # cd /var/www/html/ossec-wui
