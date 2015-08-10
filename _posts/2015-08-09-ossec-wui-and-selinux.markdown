@@ -23,9 +23,8 @@ here's what i did to get ossec and its deprecated web-ui (WUI) working with seli
 
 <!--more-->
 
-first of all i cloned the latest version of ossec-wui from the [github repository]
-(https://github.com/ossec/ossec-wui).
-and followed its guidelines. i can't stress enough that you follow these guidelines (and adapt the apache groupname "www-data" with "apache" if you're runnig a centOS/RHEL based system) and **ESPECIALLY** use the setup script.
+first of all i cloned the latest version of ossec-wui from the [github repository](https://github.com/ossec/ossec-wui), and followed its guidelines. i can't stress enough that you follow these guidelines (and adapt the apache groupname "www-data" with "apache" if you're runnig a centOS/RHEL based system) and **ESPECIALLY** use the setup script.
+
 
 
     # cd /var/www/html/ossec-wui
