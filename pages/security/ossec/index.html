@@ -9,18 +9,3 @@ tag: ossec
 
 this should contain a summary of all my ossec-related posts. also you can track the status of my thesis here :)
 
-{% for category in site.categories %}
-    {% if category[0] == page.rcategory %}
-        {% for catposts in category %}
-            {% if forloop.first %}
-                {% continue %}
-            {% endif %}
-            {% for catpost in catposts %}
-
-                <p>{{ catpost.title }}</p>
-
-            {% endfor %}
-        {% endfor %}
-    {% endif %}
-{% endfor %}
-
