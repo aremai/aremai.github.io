@@ -1,9 +1,14 @@
 ---
 layout: catpage
-title: OSSEC2
+title: OSSEC
 header: Posts by category
 permalink: /ossec/
 group: navigation
 ---
 
-i'm a dummy page for the OSSEC category
+OSSEC
+=====
+
+- - -
+
+this should contain a summary of all my ossec-related posts. also you can track the status of my thesis here :)
