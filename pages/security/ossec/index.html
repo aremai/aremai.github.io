@@ -1,23 +1,6 @@
 ---
-layout: page
-title: "OSSEC"
-header: Posts by Category
-description: "here you will find all kinds of stuff that i recently found out about the open-source security tool ossec....also you can track the current status of my thesis. ;) "
-group: navigation
+layout: catspage
+tag: jekyll
 ---
-{% include JB/setup %}
 
-{% for category in site.categories %}
-    {% if category[0] == page.rcategory %}
-        {% for catposts in category %}
-            {% if forloop.first %}
-                {% continue %}
-            {% endif %}
-            {% for catpost in catposts %}
-
-                <p>{{ catpost.title }}</p>
-
-            {% endfor %}
-        {% endfor %}
-    {% endif %}
-{% endfor %}
+this should contain a summary of all my ossec-related posts. also you can track the status of my thesis here :)
