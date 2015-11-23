@@ -19,7 +19,7 @@ They're constantly increasing it and I had the pleasure of demonstrating their c
 
 If you have any questions regarding the talk or ossec/elk just shoot me an email or ping me on jabber.
 
-![alt text](https://github.com/aremai/aremai.github.io/img/bsides-pres.jpg "/me in action")
+![me in action](/img/bsides-pres.jpg "/me in action")
 
 best,
 theresa
