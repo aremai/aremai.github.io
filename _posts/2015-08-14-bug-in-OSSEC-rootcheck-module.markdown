@@ -3,6 +3,7 @@ layout: post
 title: "Bug in OSSEC module"
 tags: [ossec, security, ids, hids, centOS]
 category: ossec
+excerpt_separator: <!--more-->
 ---
 
 hi,

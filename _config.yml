@@ -35,7 +35,14 @@ links :
 #                  You must place "<!--more-->" at paragraph in post. The whole content will be displayed in homepage if no More tag found in post.
 # "truncate_words" option: generate an excerpt automatically by selecting the first 20 words of the post. It doesn't work well in some of no-English post.
 #
-excerpt : teaser
+# excerpt : teaser
+---
+excerpt_separator: <!--more-->
+---
+
+Excerpt
+<!--more-->
+Out-of-excerpt
 
 # The number of items displayed per page.
 #

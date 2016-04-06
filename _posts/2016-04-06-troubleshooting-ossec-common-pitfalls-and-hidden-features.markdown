@@ -3,6 +3,7 @@ layout: post
 title: "Troubleshooting OSSEC -- common pitfalls and hidden features"
 tags: [OSSEC, HIDS, UNIX]
 category: ossec
+excerpt_separator: <!--more-->
 ---
 
 Hi *,

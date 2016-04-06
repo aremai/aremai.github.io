@@ -3,6 +3,7 @@ layout: post
 title: "How POODLE Happened (a very detailed explanation)"
 tags: [sslv3, ssl exploit, security]
 category: security
+excerpt_separator: <!--more-->
 ---
 
 you probably heard about the most recent SSL (V3.0) exploit, POODLE. it's been all over the news. but it was only a few days ago that I found a very good and prolific explanation on how POODLE happened and how it could stay as unnoticed for so many years.

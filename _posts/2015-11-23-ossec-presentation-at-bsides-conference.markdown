@@ -3,6 +3,7 @@ layout: post
 title: "ossec presentation at bsides conference"
 tags: [ossec, elk stack, logstash, elasticsearch, kibana, host-intrusion-detection-systems, HIDS]
 category: ossec
+excerpt_separator: <!--more-->
 ---
 
 Ehlo,
@@ -10,6 +11,8 @@ Ehlo,
 it's been a long time since I last blogged. 
 I've been a little busy with my ossec/thesis project, so there was barely any time to blog. However, last weekend (Saturday 21st November) I gave a talk about OSSEC integrated into an ELK stack (elasticsearch, logstash, kibana) environment.
 Turns out it was a great success, and to anyone who missed it, I put my slides online [here](http://www.aremai.net/files/bsides2015-ossec.pdf)
+
+<!--more-->
 
 I strongly recommend you check out the fantastic project by the amazing startup WAZUH, on Github. They forked the original OSSEC release and improved it a thousand times and integrated it nicely with ELK.
 Please head over [here](https://github.com/wazuh)

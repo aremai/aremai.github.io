@@ -3,6 +3,7 @@ layout: post
 title: "shellshock"
 category: security
 tags: [security, shellshock, bashbug, bashbleed, exploit]
+excerpt_separator: <!--more-->
 ---
 {% include JB/setup %}
 

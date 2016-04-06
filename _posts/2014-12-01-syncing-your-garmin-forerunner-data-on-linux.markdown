@@ -3,6 +3,7 @@ layout: post
 title: "Syncing your Garmin Forerunner data on linux"
 tags: [garmin, gps, gps watch, gpx, forerunner]
 category: misc
+excerpt_separator: <!--more-->
 ---
 
 hi there,

@@ -3,6 +3,7 @@ layout: post
 title: "Cold boot attack"
 tags: [cold boot attack, hack, full-disk-encryption]
 category: encryption
+excerpt_separator: <!--more-->
 ---
 {% include JB/setup %}
 

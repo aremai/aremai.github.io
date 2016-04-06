@@ -2,12 +2,7 @@
 layout: default
 group: home
 ---
-<head>
-<style media="all">
-
-#Content1, #Content2 {border-bottom: 2px solid #4588ba; margin-bottom:10px;}
-</style>
-</head>
+{% include JB/setup %}
 <div class="page-title-inline">
 	{% if page.group == 'home' %}
 	<h1>{{ site.title }} </h1><br />
@@ -17,27 +12,6 @@ group: home
 	{% if page.tagline %}<h3>{{ page.tagline }}</h3>{% endif %}
 	{% endif %}
 </div>
-<hr />
- <ul class="post-list">
-      {% for post in site.posts %}
-        <li>
-          <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-  
-          <h2>
-            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-          </h2>
-	 {{ post.excerpt }} 
-        </li>
-	<span class="readmore"><a href="{{ post.url }}">Read More</a></span>
-	 <hr />
-<div class="clearboth"></div>
-      <br />
-      <br />
-    </ul>
-  
-	{% endfor %}
-    <p class="rss-subscribe">subscribe <a href="{{ "/rss.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
 <div class="cont932">
 	<hr style="margin-top: 0;">
 	<div id="journal-articles-block">
@@ -46,7 +20,7 @@ group: home
 			<div class="journal-post-info">
 				{% assign categories_list = post.categories %}
 				{% assign category = categories_list.first %}
-				{% include category.html %}
+				{% include themes/Snail/category.html %}
 				{% assign categories_list = nil %}
 			</div>
 			<div class="journal-body">
@@ -64,4 +38,13 @@ group: home
 		<div class="clearboth"></div>
 		{% endfor %}
 	</div>
+	{% if paginator.next_page  %}
+	<div id="journal-arrows-cont">
+			<a href="{{ paginator.next_page_path }}" class="journal-arrow ja-forward"></a>
+	</div>
+	{% endif %}
+	<div class="clearboth"></div>
+	<div id="journal-loadmore">Load More…</div>
+	<div class="clearboth"></div>
 </div>
+<div class="clearboth"></div>
