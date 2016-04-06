@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: layout
 title: "Troubleshooting OSSEC -- common pitfalls and hidden features"
 tags: [OSSEC, HIDS, UNIX]
 category: OSSEC 
