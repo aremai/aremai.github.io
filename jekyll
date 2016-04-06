@@ -1,4 +1,0 @@
-{% if post.category == "ossec%}
- {% comment %} List posts... {% endcomment %}
-  {% endif %}
-

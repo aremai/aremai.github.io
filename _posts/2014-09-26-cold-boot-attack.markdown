@@ -5,7 +5,6 @@ tags: [cold boot attack, hack, full-disk-encryption]
 category: encryption
 excerpt_separator: <!--more-->
 ---
-{% include JB/setup %}
 
 Ever thought that full-disk (hardware) encryption would provide full safety to your precious data? Well, then you thought wrong ;-)
 

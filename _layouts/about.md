@@ -12,7 +12,7 @@ group: navigation
  * **XMPP** hellslide@jabber.ccc.de
  * **Github:** [aremai](https://github.com/aremai)
 
-![Alt text](images/avatar.jpg)
+![Alt text](assets/themes/Snail/img/avatar.jpg)
 
 -------
 
