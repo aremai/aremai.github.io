@@ -18,7 +18,7 @@ So, consider this blog post to be a list of tips to troubleshoot OSSEC and how t
 
 At this point I should mention that some of those problems may seem trivial to you, but maybe other find it useful and saves them some time googling....
 
-### 1.  tail: cannot watch `/var/ossec/logs/ossec.log': No space left on device
+### 1.  __tail: cannot watch `/var/ossec/logs/ossec.log': No space left on device__
 
 ok, this is an easy one. However, the error message is a bit irritating because it indicates that the filesystem is full, which it clearly is not. Instead your system (or better said: the kernel) has reached the inotify watch limit.
 
