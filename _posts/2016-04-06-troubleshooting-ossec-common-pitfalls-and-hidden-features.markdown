@@ -24,32 +24,33 @@ ok, this is an easy one. However, the error message is a bit irritating because 
 
 You can run a 
 
-     # inotifywatch -v /var/ossec/logs/ossec.log
-       Failed to watch /var/ossec/log/ossec.log; upper limit on inotify watches reached!
-       Please increase the amount of inotify watches allowed per user via '/proc/sys/fs/inotify/max_user_watches'.` 
+     ``` # inotifywatch -v /var/ossec/logs/ossec.log
+           Failed to watch /var/ossec/log/ossec.log; upper limit on inotify watches reached!
+           Please increase the amount of inotify watches allowed per user via '/proc/sys/fs/inotify/max_user_watches'.` ```
 
 I ran this command to verify it:
 
-     # cat /proc/sys/fs/inotify/max_user_watches
-       8192
+     ``` # cat /proc/sys/fs/inotify/max_user_watches
+           8192 ```
 
 
 and then ran this command to increase it permanently
 
-     # cat /proc/sys/fs/inotify/max_user_watches
-       524288
+     ``` # cat /proc/sys/fs/inotify/max_user_watches
+           524288 ```
 
 
 To find out what's using up your inotify watches, run this command:
 
-      # for foo in /proc/*/fd/*; do readlink -f $foo; done |grep inotify |cut -d/ -f3 |xargs -I '{}' -- ps --no-headers -o '%p %U %c' -p '{}' |uniq -c |sort -nr
+      ``` # for foo in /proc/*/fd/*; do readlink -f $foo; done |grep inotify |cut -d/ -f3 |xargs -I '{}' -- ps --no-headers -o '%p %U %c' -p '{}' |uniq -c |sort -nr
 
-        2     1 root     init
-        1   399 root     udevd
-        1 21291 root     ossec-syscheckd
-        1  1581 root     udevd
-        1  1580 root     udevd
-        1  1475 root     crond
+            2     1 root     init
+            1   399 root     udevd
+            1 21291 root     ossec-syscheckd
+            1  1581 root     udevd
+            1  1580 root     udevd
+            1  1475 root     crond 
+	    ```
 
 So you can see, the syscheckd process is using a lot of inotify watches for realtime-alerting (real time file integrity monitoring).
 
