@@ -17,20 +17,25 @@ however back to the topic. as mentioned i've been running a few rootchecks and n
 
 the problem i faced were odd segmentation faults caused by this command:
 
+```ruby
     # /var/ossec/bin/rootcheck_control -L -i 000
+```
 
 the -L switch lists the time of the last check and its results, and with the -i switch you can specify the host (000 = the ossec master, 002 would be an agent)
 as soon as i ran the check it threw a segmentation fault. this was starting to worry me. what could possbily cause a segmentation fault?
 
 i checked the system logs as well, and found the following error:
 
+```ruby
     Aug 10 18:45:23 tron kernel: rootcheck_contr[20641]: segfault at 8 ip
     00007f851fe8b925 sp 00007ffdc8c73240 error 4 in
     libc-2.12.so[7f851fde8000+18a000]
+```
 
 i then tried to debug it with strace to see which system call is problematic.
 strace quickly identified the problem...
 
+```ruby
     open("/etc/localtime", O_RDONLY)        = 4
     fstat(4, {st_mode=S_IFREG|0644, st_size=2211, ...}) = 0
     fstat(4, {st_mode=S_IFREG|0644, st_size=2211, ...}) = 0
@@ -42,7 +47,7 @@ strace quickly identified the problem...
     munmap(0x7ffb97d01000, 4096)            = 0
     --- SIGSEGV {si_signo=SIGSEGV, si_code=SEGV_MAPERR, si_addr=0x8} ---
     +++ killed by SIGSEGV +++
-
+```
 apparently the localtime couldn't be identified through /etc/localtime, which usually checks when the last rootcheck had been performed.
 i then contacted one of the main ossec-core developer to help me fix this problem. we did a few tests to verify and also to narrow it down. according to him the problem didn't occur on debian based systems.
 so the bug must either be system (centos) related or a bug somewhere in the ossec code. we assumed the first one, without comparing the ossec-versions, as it was working on his test environment.

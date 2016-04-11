@@ -20,20 +20,26 @@ A lot of Linux distributions, among RedHat who discovered/reported this bug, hav
 
 To find out if you're still affected from this bug, best run this in your bash.
 
-    env HOSTNAME='() { :;}; echo vulnerable' bash -c "env | grep HOSTNAME"
+```ruby
+env HOSTNAME='() { :;}; echo vulnerable' bash -c "env | grep HOSTNAME"
+```
 
 <br>
 If your shell returns the following, you're still affected and should immediately run an update on your machine.
 
-    vulnerable 
-    HOSTNAME=() {  :
+```ruby
+vulnerable 
+HOSTNAME=() {  :
+```
 
 <br>
 If you've already patched your system, the very same command will return the following:
 
-    env HOSTNAME='() { :;}; echo vulnerable' bash -c "env | grep HOSTNAME"
-    bash: warning: HOSTNAME: ignoring function definition attempt
-    bash: error importing function definition for 'HOSTNAME'
+```ruby
+env HOSTNAME='() { :;}; echo vulnerable' bash -c "env | grep HOSTNAME"
+bash: warning: HOSTNAME: ignoring function definition attempt
+bash: error importing function definition for 'HOSTNAME'
+```
 
 <br>
 Systems that are probably most vulnerable by this bug are servers that are exposed to the internet, e.g webservers, dns servers, mailservers, etc..

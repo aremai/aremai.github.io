@@ -27,25 +27,31 @@ here's what i did to get ossec and its deprecated web-ui (WUI) working with seli
 first of all i cloned the latest version of ossec-wui from the [github repository](https://github.com/ossec/ossec-wui), and followed its guidelines. i can't stress enough that you follow these guidelines (and adapt the apache groupname "www-data" with "apache" if you're runnig a centOS/RHEL based system) and **ESPECIALLY** use the setup script.
 
 
-
+```ruby
     # cd /var/www/html/ossec-wui
     # ./setup.sh
+```
 
 i forgot to run that, and at first ossec-wui never quite really worked. (should have read the guidelines more carefully).
 however after the setup script has finished, you're pretty much good to go. you can call it in your browser, and most likely will be facing a typical HTTP 403 (forbidden) error.
 at first i was quite confused, and would have never thought of selinux to be causing the problem.
 but a quick look into the apache error logs, i found a lot of "permission denieds" in this log....
 
+```ruby
     # Warning: opendir(/var/ossec/etc/ossec.conf) [function.opendir]: failed to open dir: Permission denied in /var/www/ossec-wui/lib/os_lib_handle.php on line 94
+```
 
 in order to fix this problem i did the following:
 
    this restores the security context of the ossec wui folder
 
+```ruby
     # restorecon -R /var/www/html/ossec-wui/
+```
 
-   and this changes the security context for the OSSEC alerts.log file so it can be read by the apache server. 
+    and this changes the security context for the OSSEC alerts.log file so it can be read by the apache server. 
 
+```ruby
     # chcon -R -t httpd_sys_content_t '/var/www/html/ossec-wui/'
 
     # chcon -t httpd_sys_content_t '/var/ossec'
@@ -53,11 +59,14 @@ in order to fix this problem i did the following:
     # chcon -R -t httpd_sys_content_t '/var/ossec/queue/agent-info/'
     # chcon -R -t httpd_sys_content_t '/var/ossec/queue/syscheck'
     # chcon -R -t httpd_sys_content_t '/var/ossec/stats/'
+```
 
    after that you only need to restart the apache daemon and ossec.
 
+```ruby
     # service httpd restart
     # /var/ossec/bin/ossec-control restart
+```
 
    now you should be able to see all your alerts and integrity checks in your ossec-wui instead of the permission denieds or the "unable to access ossec directory" messages.
 
