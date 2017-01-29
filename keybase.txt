@@ -1,0 +1,69 @@
+==================================================================
+https://keybase.io/micsnare
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://aremai.net
+  * I am micsnare (https://keybase.io/micsnare) on keybase.
+  * I have a public key with fingerprint A2EB F148 5FA8 20D0 3D97  E0ED BE4F 2409 C2C8 37F1
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "0101eef312bd37a2794165956b3e9f26e9c61ea9b88fad24f92fc138b0a909f801800a",
+            "fingerprint": "a2ebf1485fa820d03d97e0edbe4f2409c2c837f1",
+            "host": "keybase.io",
+            "key_id": "be4f2409c2c837f1",
+            "kid": "0101eef312bd37a2794165956b3e9f26e9c61ea9b88fad24f92fc138b0a909f801800a",
+            "uid": "f6ad50727ced0094d553abb0dda56219",
+            "username": "micsnare"
+        },
+        "service": {
+            "hostname": "aremai.net",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1485723885,
+    "expire_in": 157680000,
+    "prev": "63e33c40875d97c157418a23611a0273bf3e9d2ff717a2bcd4b1fa701d4360c6",
+    "seqno": 8,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: GnuPG v1
+
+owGtUltIVEEYXi9pRZYQUZQ9NFEvbtvMuZ/1oRSzG4hUiha4zDkzowfds9ueo6Ui
+VCBm2pWKNKQoMkKC1iysxKIMo/QhKygCk25UFNVD0EWtOWJvPfY0zD/f9833ffyH
+0pJ8iQkO+FifMrC1NuHBe8NXfKD4Wx0wIqQGBOtABZ08aCWhjhuqsAgIAoggopSJ
+SDCIqGJB1SWkyLqsGCLVmaBQ3VQQxbqhaQwTQWK6wEwkagbEOtSZBpEGIQZ+wCy7
+jMaiMct2uSwWqMGQpMkMawIkUCS6SiElBpWYIEHdFExNVBnixPKI4zG4OQM7NGBF
++IxfQpP2/oH/z76rJuWYgokMVUE1KYFQl4gsi9gwICFYVgSke0CHxmwcphwdtkzH
+xjEK6v2AT6stk3rFekmmEPwxjK2ATV3OjMYibsSMVPJ5uetGgx7NrYl6uB3UCE0p
+hAzLJrxETqimMceK2CCIONJ0LU/SK1MVRE2T/YDujFoxGrI8hKwqPAmE3je0mksq
+IhVFU4KaWijz1k2OkJCGBVFBCENBFQ3GKyICYyrixRkmkQzEsAoRkUQFmgrwQm23
+IyCocZ+4jGs6VpmN3Sov8cymhIxkX0KiL2Vaordevpkz0v/u3N2e1F8p8OvLF8eu
+9wd2u6fmdHZuvDX8rAuImR9KVx3Nr2m8szm5ZPmBIdi2gYweOXM03t69r7/h3Jo5
+2fsrzw4v7akojDe3Sx1bnJwrt3PTn7/KulzeOEBCs+GpxHknd118PdJ7r6DF/zt8
+ZMbx+JenfYvG20Z/1eTld71V360uaX34Y89g25KiG5/7i8ZqQcbYpu9XwayJ0p+d
+p5+cfn7/zeOC82kdfdUnWjNHmzvHc2NJI7UN8zcvWIkWLoy/rsza39zIHqVdWNrT
+e21vYEW8FK/NUbvSm0cmupMvHWbh362BTx2Zc4fW3dzWk5c6zAanZxd/RH47e9pB
+uqVg/fbFu2lGU0v2sj8=
+=uPFQ
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/micsnare
+
+==================================================================
+
+
